@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urgent-First Study Planner</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-graduation-cap"></i> Study Planner</h1>
+            <p>Selesaikan tugas berdasarkan urgensi terdekat!</p>
+        </header>
+
+        <main>
+            <!-- Add Task Form -->
+            <section class="card">
+                <form id="taskForm">
+                    <div class="form-group">
+                        <label for="taskName">Nama Tugas</label>
+                        <input type="text" id="taskName" placeholder="Contoh: Makalah Sejarah" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="courseName">Mata Kuliah</label>
+                        <input type="text" id="courseName" placeholder="Contoh: Sejarah Indonesia" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="deadline">Tenggat Waktu (Deadline)</label>
+                        <input type="datetime-local" id="deadline" required>
+                    </div>
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-plus"></i> Tambah Tugas
+                    </button>
+                </form>
+            </section>
+
+            <!-- Active Tasks List -->
+            <section>
+                <h2 class="section-title">Tugas Aktif</h2>
+                <ul id="activeTasksList" class="task-list">
+                    <!-- Tasks will be injected here via JS -->
+                </ul>
+            </section>
+
+            <!-- Completed Tasks List -->
+            <section style="margin-top: 40px;">
+                <h2 class="section-title">Tugas Selesai</h2>
+                <ul id="completedTasksList" class="task-list">
+                    <!-- Tasks will be injected here via JS -->
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>
